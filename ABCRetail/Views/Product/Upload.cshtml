@@ -1,0 +1,16 @@
+﻿<h2>Upload Product Image</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <br /><br />
+    <button type="submit">Upload</button>
+</form>
+
+<!-- ✅ ADD THIS LINE -->
+<p>@ViewBag.Message</p>
+
+@if (ViewBag.ImageUrl != null)
+{
+    <p>Uploaded Image:</p>
+    <img src="@ViewBag.ImageUrl" width="200" />
+}
